@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*body{
+    height: 200vw;
+}*/
+
+header{
+    height: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav{
+    width: 60%;
+}
+
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 19px;
+    transition: .5s;
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+li:hover{
+    color: #cc00cc;
+}
+
+.use{
+    color: #cc00cc;
+}
+
+#logo{
+    width: 140px;
+    height: auto;
+    border-radius: 10%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#main_banner{
+    width: 100%;
+    height: auto;
+}
+
+#trailer-container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer{
+    width: 50%;
+    border-radius: 5px;
+}
+
+#sinopse{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.description{
+    color: #fff;
+    font-size: 19px;
+    font-family: "Kdam Thmor Pro",sans-serif;
+    width: 70%;
+    text-align: justify;
+}
+
+.button{
+    width: 200px;
+    height: 60px;
+    background-color: #cc00cc;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .8s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+}
+
+.button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.actor-cards-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cards-content{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+.card{
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color: #fff;
+    font-size: 17px;
+    font-family: "Kdam Thmor Pro",sans-serif;
+    text-align: center;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+.banner-1{
+    background-image: url('https://p2.trrsf.com/image/fget/cf/1200/675/middle/images.terra.com/2024/04/03/182501624-a8cbfa03a54fd0a8547538247afed0b6.jpg');
+    background-position: 70% 50%;
+}
+.banner-2{
+    background-image: url('https://static.wikia.nocookie.net/godzilla/images/4/42/Ilene_Andrews.jpg');
+    background-position: 10% 50%;
+}
+.banner-3{
+    background-image: url('https://pbs.twimg.com/media/GKXhqvVWIAAngof.jpg');
+    background-position: 30% 50%;
+}
+/* .banner-4{
+    background-image: url('https://t2.tudocdn.net/694031?w=824&h=494');
+    background-position: 55% 50%;
+    margin-left: 55%;
+}
+.banner-5{
+    background-image: url('https://t.ctcdn.com.br/q_fLP-G7y51arhSaQjkxEmeY1sY=/1400x788/smart/i880069.jpeg');
+    background-position: 55% 50%;
+    margin-left: 55%;
+} */
+
+footer{
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+span{
+    color: #fff;
+    font-family: "Kdam Thmor Pro",sans-serif;  
+}
+
+.footer_navegation{
+    display: none;
+}
+
+.footer_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width: 768px){
+    .footer_navegation{
+        display: block;
+    }
+    
+    nav{
+        display: none;
+    }
+    
+    #banner{
+        background-position: 40%;
+    }
+    
+    #trailer-container{
+        width: 100%;
+        height: 580px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .trailer{
+        width: 100%;
+    }
+    
+    #sinopse{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0px;
+    }
+
+    .description{
+        width: 100%;
+    }
+
+    .button{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .actor-cards-container{
+        margin-top: 0px;
+    }
+
+    .cards-content{
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+    }
+
+    .card{
+        margin-left: 0%;
+    }
+}
