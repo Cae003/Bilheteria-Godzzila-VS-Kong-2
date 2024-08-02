@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentários</title>
+    <link rel="stylesheet" href="coment_styles.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="./Logo_semF.png">
+        <nav>
+            <ul>
+                <a href="./index.html">
+                    <li>Home</li>
+                </a>
+                <a href="./contatos.html">
+                    <li>Contatos</li>
+                </a>
+                <a href="./fotos.html">
+                    <li>Fotos</li>
+                </a>
+                <a href="./coment.html">
+                    <li class="use">Comentários</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <div id="container_title">
+        <h1 id="title">Deixe seu Comentário</h1>
+    </div>
+
+    <div id="container_comment">
+        <form id="commentForm">
+            <div class="input">
+                <label class="label" for="nome">Nome:</label>
+                <input type="text" placeholder="Digite seu Nome*" id="nome" name="nome" required>
+            </div>
+            
+            <div class="input">
+                <label class="label" for="comentario">Comentário:</label>
+                <textarea id="comentario" placeholder="Digite o Comentário*" name="comentario" rows="4" required></textarea>
+            </div>
+    
+            <button class="button" type="submit">Enviar Comentário</button>
+        </form>
+        
+        <div id="comentarios">
+            <!-- Os comentários serão exibidos aqui -->
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("commentForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita o comportamento padrão do formulário
+
+            var nome = document.getElementById("nome").value;
+            var comentario = document.getElementById("comentario").value;
+
+            var novoComentario = document.createElement("p");
+            novoComentario.classList.add("comment");
+            novoComentario.innerHTML = "<strong>" + nome + ":</strong> " + comentario;
+
+            document.getElementById("comentarios").appendChild(novoComentario);
+
+            // Limpar os campos após o envio do comentário
+            document.getElementById("nome").value = "";
+            document.getElementById("comentario").value = "";
+        });
+    </script>
+
+    <footer>
+        <img style="object-fit: contain;" id="logo" src="./Logo_semF.png">
+        <span>Todos os direitos reservados ©</span>
+        <span>Desenvolvido por: Caetano José</span>
+        <nav class="footer_navegation">
+            <ul class="footer_list">
+                <a href="./index.html">
+                    <li>Home</li>
+                </a>
+                <a href="./contatos.html">
+                    <li>Contatos</li>
+                </a>
+                <a href="./fotos.html">
+                    <li>Fotos</li>
+                </a>
+                <a href="./coment.html">
+                    <li class="use">Comentários</li>
+                </a>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
